@@ -27,7 +27,8 @@ require([
             itemsrc = item.el.attr('src');
             try {
                 image_url = itemsrc.split('/@@images')[0];
-                item.src =  image_url + '/@@images/image/' + image_size;
+                image_field = itemsrc.split('/@@images')[1].split('/')[1];
+                item.src =  image_url + '/@@images/' + image_field + '/' + image_size;
             }
             catch(err) {
     			item.src = itemsrc;
@@ -51,7 +52,8 @@ require([
             itemsrc = item.el.attr('src');
             try {
                 image_url = itemsrc.split("/@@images")[0];
-                item.src =  image_url + '/@@images/image/' + image_size;
+                image_field = itemsrc.split('/@@images')[1].split('/')[1];
+                item.src =  image_url + '/@@images/' + image_field + '/' + image_size;
             }
             catch(err) {
     			item.src = itemsrc;
